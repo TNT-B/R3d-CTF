@@ -10,7 +10,16 @@
     <link rel="stylesheet" href="{{ url_for('views.themes', path='css/core.css') }}">
     {% block stylesheets %}
     {% endblock %}
-
+    <!-- <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background-color: #f9f9f9; color: #333; }
+        h1, h2 { color: #0056b3; }
+        ul { list-style-type: none; padding: 0; }
+        ul li::before { content: "• "; color: #0056b3; font-weight: bold; }
+        section { margin-bottom: 2rem; background-color: rgb(218, 113, 113); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .emoji { font-size: 1.2em; margin-right: 0.3em; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style> -->
     {{ Plugins.styles }}
     <script type="text/javascript">
         var init = {
@@ -27,14 +36,15 @@
 </head>
 <body>
     {% include "components/navbar.html" %}
-
+    
     <main role="main">
         {% block content %}
+        <!-- <div class="container my-4">
+            <img src="themes\core-beta\static\img\banner.png" class="img-fluid w-100 rounded" alt="CTF Banner">
+        </div> -->
         {% endblock %}
+        
     </main>
-    <div class="container my-4">
-        <img src="themes\core-beta\static\img\banner.png" class="img-fluid w-100 rounded" alt="CTF Banner">
-    </div>
       
 
     <footer class="footer">

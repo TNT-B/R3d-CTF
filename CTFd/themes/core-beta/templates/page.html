@@ -1,7 +1,89 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="container">
-	{{ content | safe }}
+	<div class="">
+	<!-- {{ content | safe }} -->
+	   <div class="">
+            <img src="themes\core-beta\static\img\banner.png" class="img-fluid w-100 rounded" alt="CTF Banner">
+        
+		<div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>HCMUS-CTF REWIND</h1>
+        <p><strong>Relive the Best. Reignite the Challenge.</strong></p>
+
+        <section>
+            <p>
+                <strong>HCMUS-CTF REWIND</strong> is a Capture The Flag (CTF) event that brings back the most iconic and well-crafted challenges from previous CTF competitions hosted by the Computer Security Club - University of Science, VNU - HCM.
+            </p>
+            <p>
+                Whether you're revisiting your favorite puzzles or facing them for the first time, REWIND offers a curated selection of past challenges across key cybersecurity categories:
+            </p>
+            <ul>
+                <li><span class="emoji">🔐</span> Cryptography</li>
+                <li><span class="emoji">🕵️</span> Digital Forensics</li>
+                <li><span class="emoji">🐞</span> Binary Exploitation</li>
+                <li><span class="emoji">🕸️</span> Web Security</li>
+                <li><span class="emoji">🔍</span> Reverse Engineering</li>
+            </ul>
+            <p>
+                Perfect for both beginners and experienced players, this event provides a fun, pressure-free environment to practice, learn, and celebrate the legacy of HCMUS-CTF.
+            </p>
+            <p><strong>Ready to rewind and conquer?</strong></p>
+            <p>Join us on Discord: <a href="https://discord.gg/kkts8jcSCJ" target="_blank">https://discord.gg/kkts8jcSCJ</a></p>
+        </section>
+
+        <section>
+            <h2>Eligibility</h2>
+            <p>Only current HCMUS students (except organizers and challenge authors) are eligible to participate. Prize eligibility requires that <strong>all team members</strong> must be current HCMUS students.</p>
+        </section>
+
+        <section>
+            <h2>Rules</h2>
+            <ul>
+                <li>You may use any tool to solve challenges. Open-source tools are encouraged.</li>
+                <li>Each person may only join one team.</li>
+                <li>No sharing of flags, hints, or solutions between teams.</li>
+                <li>Teams may consist of up to <strong>4 HCMUS students</strong>.</li>
+                <li>All teams must register with a valid email (preferably school email).</li>
+                <li>Do not attack infrastructure or unrelated systems.</li>
+                <li>No brute-force attacks (e.g., dirbuster, nmap) unless explicitly allowed.</li>
+                <li>Using tools like ChatGPT or Google Gemini is allowed, but not other people.</li>
+                <li>Flag format: <code>HCMUS-CTF{TEXT_HERE}</code> unless specified otherwise.</li>
+                <li>No brute-force guessing of flags. Contact support if you're unsure.</li>
+                <li>Violations may result in disqualification. Organizer decisions are final.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Scoring</h2>
+            <ul>
+                <li>Each challenge has a point value.</li>
+                <li>Ranking is based on total points. Tie-breaker: first to reach top score (excluding trivial solves).</li>
+                <li>Dynamic scoring: challenges solved by many teams are worth less.</li>
+                <li>No time bonuses.</li>
+                <li>Winners will be contacted via the registered email.</li>
+                <li>Organizers may require write-ups from winning teams.</li>
+                <li>If an ineligible team wins, the next eligible team gets the prize.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Swags</h2>
+            <ul>
+                <li><strong>1st Place:</strong> T-Shirts</li>
+                <li><strong>2nd Place:</strong> Lanyards</li>
+                <li><strong>3rd Place:</strong> Stickers</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Support</h2>
+            <p>Need help during the competition? Join our Discord: <a href="https://discord.gg/kkts8jcSCJ" target="_blank">https://discord.gg/kkts8jcSCJ</a></p>
+            <p>Private questions before the event? Email us at <a href="mailto:compsec.club@fit.hcmus.edu.vn">compsec.club@fit.hcmus.edu.vn</a></p>
+        </section>
+                    </div>
+                </div>
 	</div>
+	
 {% endblock %}
