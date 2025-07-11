@@ -5,85 +5,162 @@
 	<!-- {{ content | safe }} -->
 	   <div class="">
             <img src="themes\core-beta\static\img\banner.png" class="img-fluid w-100 rounded" alt="CTF Banner">
-        
-		<div class="container">
+            <br></br>
+            <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>HCMUS-CTF REWIND</h1>
-        <p><strong>Relive the Best. Reignite the Challenge.</strong></p>
+                    <h1>Nghiên cứu các lỗ hổng bảo mật &</h1>
+                    <h1>Xây dựng các bài lab thực hành</h1>
+                <br></br>
+                    <section>
+                        <p>
+                            Đây là đề tài khóa luận tốt nghiệp định hướng nghiên cứu và thực hành trong lĩnh vực <strong>an toàn thông tin</strong>,
+                            tập trung vào việc phát hiện và khai thác <strong>các lỗ hổng bảo mật</strong> thực tế, đồng thời xây dựng hệ thống bài lab mô phỏng dưới hình thức Capture The Flag (CTF).
+                        </p>
+                        <p>
+                            Dự án được thiết kế theo các bài lab Website Security giúp sinh viên có thể luyện tập kỹ năng khai thác, phân tích và phòng thủ hệ thống thông qua mô hình mô phỏng các cuộc tấn công mạng. Với nội dung đa dạng, hệ thống lab sẽ phù hợp cho cả sinh viên mới bắt đầu lẫn những bạn đang tham gia các cuộc thi học thuật về bảo mật.
+                        </p>
+                        <!-- <ul>
+                            <li><span class="emoji">🌐</span> Web Security</li>
+                        </ul> -->
+                        <p><strong>Sẵn sàng luyện tập và nâng cao kỹ năng?</strong></p>
+                    </section>
 
-        <section>
-            <p>
-                <strong>HCMUS-CTF REWIND</strong> is a Capture The Flag (CTF) event that brings back the most iconic and well-crafted challenges from previous CTF competitions hosted by the Computer Security Club - University of Science, VNU - HCM.
-            </p>
-            <p>
-                Whether you're revisiting your favorite puzzles or facing them for the first time, REWIND offers a curated selection of past challenges across key cybersecurity categories:
-            </p>
-            <ul>
-                <li><span class="emoji">🔐</span> Cryptography</li>
-                <li><span class="emoji">🕵️</span> Digital Forensics</li>
-                <li><span class="emoji">🐞</span> Binary Exploitation</li>
-                <li><span class="emoji">🕸️</span> Web Security</li>
-                <li><span class="emoji">🔍</span> Reverse Engineering</li>
-            </ul>
-            <p>
-                Perfect for both beginners and experienced players, this event provides a fun, pressure-free environment to practice, learn, and celebrate the legacy of HCMUS-CTF.
-            </p>
-            <p><strong>Ready to rewind and conquer?</strong></p>
-            <p>Join us on Discord: <a href="https://discord.gg/kkts8jcSCJ" target="_blank">https://discord.gg/kkts8jcSCJ</a></p>
-        </section>
+                    <section>
+                        <h2>Định hướng nội dung</h2>
+                        <p>Khóa luận hướng đến mô hình thực hành theo chuẩn Capture The Flag (CTF), bao gồm hai thể loại:</p>
+                        <ul>
+                            <li><strong>Jeopardy CTF:</strong> Các thử thách được chia theo chuyên mục như:
+                                <ul>
+                                    <li>Khai thác lỗ hổng phần mềm/web</li>
+                                    <li>Phân tích mã nguồn</li>
+                                    <li>Dịch ngược và giải mã</li>
+                                </ul>
+                            </li>
+                            <li><strong>Attack-Defense CTF:</strong> Người chơi vừa bảo vệ hệ thống của mình, vừa tìm cách tấn công đối thủ.</li>
+                        </ul>
+                    </section>
 
-        <section>
-            <h2>Eligibility</h2>
-            <p>Only current HCMUS students (except organizers and challenge authors) are eligible to participate. Prize eligibility requires that <strong>all team members</strong> must be current HCMUS students.</p>
-        </section>
+                    <section>
+                        <h2>Mục tiêu đề tài</h2>
+                        <ul>
+                            <li>Phân tích và tổng hợp các loại lỗ hổng bảo mật phổ biến.</li>
+                            <li>Xây dựng môi trường lab CTF trên nền Docker hoặc máy ảo.</li>
+                            <li>Thiết kế giao diện web quản lý và chấm điểm tự động.</li>
+                            <li>Đề xuất mô hình triển khai thực tế tại giảng đường hoặc CLB học thuật.</li>
+                        </ul>
+                    </section>
 
-        <section>
-            <h2>Rules</h2>
-            <ul>
-                <li>You may use any tool to solve challenges. Open-source tools are encouraged.</li>
-                <li>Each person may only join one team.</li>
-                <li>No sharing of flags, hints, or solutions between teams.</li>
-                <li>Teams may consist of up to <strong>4 HCMUS students</strong>.</li>
-                <li>All teams must register with a valid email (preferably school email).</li>
-                <li>Do not attack infrastructure or unrelated systems.</li>
-                <li>No brute-force attacks (e.g., dirbuster, nmap) unless explicitly allowed.</li>
-                <li>Using tools like ChatGPT or Google Gemini is allowed, but not other people.</li>
-                <li>Flag format: <code>HCMUS-CTF{TEXT_HERE}</code> unless specified otherwise.</li>
-                <li>No brute-force guessing of flags. Contact support if you're unsure.</li>
-                <li>Violations may result in disqualification. Organizer decisions are final.</li>
-            </ul>
-        </section>
+                    <section>
+                        <h2>Sản phẩm khóa luận</h2>
+                        <ul>
+                            <li>Bộ bài lab CTF với đầy đủ tài liệu hướng dẫn, write-up mẫu.</li>
+                            <li>Trang web luyện tập có chức năng kiểm tra flag.</li>
+                            <li>Script triển khai lab tự động bằng Docker Compose.</li>
+                            <li>Báo cáo tổng hợp, tài liệu nghiên cứu và tài nguyên tham khảo.</li>
+                        </ul>
+                    </section>
 
-        <section>
-            <h2>Scoring</h2>
-            <ul>
-                <li>Each challenge has a point value.</li>
-                <li>Ranking is based on total points. Tie-breaker: first to reach top score (excluding trivial solves).</li>
-                <li>Dynamic scoring: challenges solved by many teams are worth less.</li>
-                <li>No time bonuses.</li>
-                <li>Winners will be contacted via the registered email.</li>
-                <li>Organizers may require write-ups from winning teams.</li>
-                <li>If an ineligible team wins, the next eligible team gets the prize.</li>
-            </ul>
-        </section>
+                    <section>
+                        <h2>Đối tượng thụ hưởng</h2>
+                        <ul>
+                            <li>Sinh viên ngành CNTT muốn học và thực hành về bảo mật.</li>
+                            <li>Giảng viên muốn tích hợp nội dung thực hành vào chương trình đào tạo.</li>
+                            <li>CLB học thuật, đội tuyển CTF tại HCMUS.</li>
+                        </ul>
+                    </section>
 
-        <section>
-            <h2>Swags</h2>
-            <ul>
-                <li><strong>1st Place:</strong> T-Shirts</li>
-                <li><strong>2nd Place:</strong> Lanyards</li>
-                <li><strong>3rd Place:</strong> Stickers</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Support</h2>
-            <p>Need help during the competition? Join our Discord: <a href="https://discord.gg/kkts8jcSCJ" target="_blank">https://discord.gg/kkts8jcSCJ</a></p>
-            <p>Private questions before the event? Email us at <a href="mailto:compsec.club@fit.hcmus.edu.vn">compsec.club@fit.hcmus.edu.vn</a></p>
-        </section>
-                    </div>
+                    <section>
+                        <h2>Cộng đồng & Liên hệ</h2>
+                        <p>Hãy tham gia cộng đồng để trao đổi và luyện tập cùng mọi người:</p>
+                        <p>Discord: <a href="https://discord.gg/kkts8jcSCJ" target="_blank">https://discord.gg/kkts8jcSCJ</a></p>
+                        <p>Email trao đổi: <a href="mailto:compsec.club@fit.hcmus.edu.vn">compsec.club@fit.hcmus.edu.vn</a></p>
+                        <p><strong>TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN - ĐHQG TP. HỒ CHÍ MINH | KHOA CÔNG NGHỆ THÔNG TIN</strong></p>
+                    </section>
                 </div>
-	</div>
+            </div>
+        </div>
+        </div>
+
+		<!-- <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Nghiên cứu các lỗ hổng bảo mật </h1>
+                    <h1>& Xây dựng các bài lab thực hành</h1>
+                    <p><strong>TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN - ĐHQG TP. HỒ CHÍ MINH KHOA CÔNG NGHỆ THÔNG TIN.</strong></p>
+
+                    <section>
+                        <p>
+                            <strong>HCMUS-CTF REWIND</strong> is a Capture The Flag (CTF) event that brings back the most iconic and well-crafted challenges from previous CTF competitions hosted by the Computer Security Club - University of Science, VNU - HCM.
+                        </p>
+                        <p>
+                            Whether you're revisiting your favorite puzzles or facing them for the first time, REWIND offers a curated selection of past challenges across key cybersecurity categories:
+                        </p>
+                        <ul>
+                            <li><span class="emoji">🔐</span> Cryptography</li>
+                            <li><span class="emoji">🕵️</span> Digital Forensics</li>
+                            <li><span class="emoji">🐞</span> Binary Exploitation</li>
+                            <li><span class="emoji">🕸️</span> Web Security</li>
+                            <li><span class="emoji">🔍</span> Reverse Engineering</li>
+                        </ul>
+                        <p>
+                            Perfect for both beginners and experienced players, this event provides a fun, pressure-free environment to practice, learn, and celebrate the legacy of HCMUS-CTF.
+                        </p>
+                        <p><strong>Ready to rewind and conquer?</strong></p>
+                        <p>Join us on Discord: <a href="https://discord.gg/kkts8jcSCJ" target="_blank">https://discord.gg/kkts8jcSCJ</a></p>
+                    </section>
+
+                    <section>
+                        <h2>Eligibility</h2>
+                        <p>Only current HCMUS students (except organizers and challenge authors) are eligible to participate. Prize eligibility requires that <strong>all team members</strong> must be current HCMUS students.</p>
+                    </section>
+
+                    <section>
+                        <h2>Rules</h2>
+                        <ul>
+                            <li>You may use any tool to solve challenges. Open-source tools are encouraged.</li>
+                            <li>Each person may only join one team.</li>
+                            <li>No sharing of flags, hints, or solutions between teams.</li>
+                            <li>Teams may consist of up to <strong>4 HCMUS students</strong>.</li>
+                            <li>All teams must register with a valid email (preferably school email).</li>
+                            <li>Do not attack infrastructure or unrelated systems.</li>
+                            <li>No brute-force attacks (e.g., dirbuster, nmap) unless explicitly allowed.</li>
+                            <li>Using tools like ChatGPT or Google Gemini is allowed, but not other people.</li>
+                            <li>Flag format: <code>HCMUS-CTF{TEXT_HERE}</code> unless specified otherwise.</li>
+                            <li>No brute-force guessing of flags. Contact support if you're unsure.</li>
+                            <li>Violations may result in disqualification. Organizer decisions are final.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Scoring</h2>
+                        <ul>
+                            <li>Each challenge has a point value.</li>
+                            <li>Ranking is based on total points. Tie-breaker: first to reach top score (excluding trivial solves).</li>
+                            <li>Dynamic scoring: challenges solved by many teams are worth less.</li>
+                            <li>No time bonuses.</li>
+                            <li>Winners will be contacted via the registered email.</li>
+                            <li>Organizers may require write-ups from winning teams.</li>
+                            <li>If an ineligible team wins, the next eligible team gets the prize.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Swags</h2>
+                        <ul>
+                            <li><strong>1st Place:</strong> T-Shirts</li>
+                            <li><strong>2nd Place:</strong> Lanyards</li>
+                            <li><strong>3rd Place:</strong> Stickers</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Support</h2>
+                        <p>Need help during the competition? Join our Discord: <a href="https://discord.gg/kkts8jcSCJ" target="_blank">https://discord.gg/kkts8jcSCJ</a></p>
+                        <p>Private questions before the event? Email us at <a href="mailto:compsec.club@fit.hcmus.edu.vn">compsec.club@fit.hcmus.edu.vn</a></p>
+                    </section>
+                 </div>
+            </div>
+	</div> -->
 	
 {% endblock %}
