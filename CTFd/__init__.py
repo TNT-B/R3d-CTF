@@ -314,6 +314,7 @@ def create_app(config="CTFd.config.Config"):
         from CTFd.errors import render_error
         from CTFd.events import events
         from CTFd.scoreboard import scoreboard
+        from CTFd.testdocument import testdocument
         from CTFd.share import social
         from CTFd.teams import teams
         from CTFd.users import users
@@ -324,6 +325,7 @@ def create_app(config="CTFd.config.Config"):
         app.register_blueprint(users)
         app.register_blueprint(challenges)
         app.register_blueprint(scoreboard)
+        app.register_blueprint(testdocument)
         app.register_blueprint(auth)
         app.register_blueprint(api)
         app.register_blueprint(events)
