@@ -1,8 +1,8 @@
-# 🔐 Nghiên cứu các lỗ hổng bảo mật và xây dựng bài lab thực hành
+# Nghiên cứu các lỗ hổng bảo mật và xây dựng bài lab thực hành
 
 **Khóa luận tốt nghiệp cử nhân - Chương trình Chất lượng cao**
 
-## 🏫 Trường Đại học Khoa học Tự nhiên
+## Trường Đại học Khoa học Tự nhiên
 
 **Khoa Công nghệ Thông tin**  
 **Chuyên ngành: Mạng máy tính và Viễn thông - Hướng An toàn thông tin**
@@ -18,7 +18,7 @@
 
 ---
 
-## 📝 Giới thiệu
+## Giới thiệu
 
 Trong thời đại số bùng nổ, mọi thông tin cá nhân, giao dịch tài chính và hoạt động đời sống đều được số hóa và lưu trữ trực tuyến. Điều này mở ra cơ hội to lớn cho xã hội phát triển nhưng đồng thời cũng tạo điều kiện thuận lợi cho các cuộc tấn công mạng ngày càng tinh vi và nguy hiểm.
 
@@ -26,18 +26,18 @@ Thực tế cho thấy, nhu cầu nhân lực về **An toàn thông tin** ngày
 
 ---
 
-## 🎯 Mục tiêu dự án
+## Mục tiêu dự án
 
 Xây dựng một nền tảng học tập và thực hành bảo mật hiệu quả với các tiêu chí:
 
-- ✅ **Dễ tiếp cận**: Phù hợp với người mới học hoặc mới làm quen với CTF.
-- ✅ **Thực tiễn**: Dựa trên các lỗ hổng bảo mật phổ biến trong thực tế.
-- ✅ **Từng bước nâng cao**: Bài lab được xây dựng theo cấp độ, từ cơ bản đến nâng cao.
-- ✅ **Có tính sư phạm**: Giúp người học dễ dàng hiểu bản chất, khai thác và phòng tránh các lỗ hổng.
+- **Dễ tiếp cận**: Phù hợp với người mới học hoặc mới làm quen với CTF.
+- **Thực tiễn**: Dựa trên các lỗ hổng bảo mật phổ biến trong thực tế.
+- **Từng bước nâng cao**: Bài lab được xây dựng theo cấp độ, từ cơ bản đến nâng cao.
+- **Có tính sư phạm**: Giúp người học dễ dàng hiểu bản chất, khai thác và phòng tránh các lỗ hổng.
 
 ---
 
-## 🧠 Nội dung chính
+## Nội dung chính
 
 Dự án bao gồm 18 chủ đề phổ biến trong bảo mật Web và ứng dụng, mỗi chủ đề có:
 
@@ -58,7 +58,7 @@ Ví dụ các chủ đề:
 
 ---
 
-## 🚀 Dự án
+## Dự án
 
 ```bash
 git clone https://github.com/TNT-B/R3d-CTF.git
