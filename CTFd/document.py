@@ -1,5 +1,3 @@
-from flask import Blueprint, render_template
-
 # from CTFd.utils import config
 # from CTFd.utils.config.visibility import scores_visible
 # from CTFd.utils.decorators.visibility import (
@@ -11,9 +9,10 @@ from flask import Blueprint, render_template
 # from CTFd.utils.scores import get_standings
 # from CTFd.utils.user import is_admin
 
-testdocument = Blueprint("testdocument", __name__)
+from flask import Blueprint, render_template
 
+document = Blueprint("document", __name__)      # document
 
-@testdocument.route("/testdocument")
+@document.route("/document")
 def document_view():
     return render_template("document.html")

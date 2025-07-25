@@ -1,90 +1,66 @@
-# ![](https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/logo.png?raw=true)
+# 🔐 Nghiên cứu các lỗ hổng bảo mật và xây dựng bài lab thực hành
 
-![CTFd MySQL CI](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI/badge.svg?branch=master)
-![Linting](https://github.com/CTFd/CTFd/workflows/Linting/badge.svg?branch=master)
-[![MajorLeagueCyber Discourse](https://img.shields.io/discourse/status?server=https%3A%2F%2Fcommunity.majorleaguecyber.org%2F)](https://community.majorleaguecyber.org/)
-[![Documentation Status](https://api.netlify.com/api/v1/badges/6d10883a-77bb-45c1-a003-22ce1284190e/deploy-status)](https://docs.ctfd.io)
+**Khóa luận tốt nghiệp cử nhân - Chương trình Chất lượng cao**
 
-## What is CTFd?
+## 🏫 Trường Đại học Khoa học Tự nhiên
 
-CTFd is a Capture The Flag framework focusing on ease of use and customizability. It comes with everything you need to run a CTF and it's easy to customize with plugins and themes.
+**Khoa Công nghệ Thông tin**  
+**Chuyên ngành: Mạng máy tính và Viễn thông - Hướng An toàn thông tin**
 
-![CTFd is a CTF in a can.](https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/scoreboard.png?raw=true)
+**Sinh viên thực hiện:**
 
-## Features
+- Hoàng Anh Tú - 21127466
+- Trần Nguyễn Thanh Bình - 21127584
 
-- Create your own challenges, categories, hints, and flags from the Admin Interface
-  - Dynamic Scoring Challenges
-  - Unlockable challenge support
-  - Challenge plugin architecture to create your own custom challenges
-  - Static & Regex based flags
-    - Custom flag plugins
-  - Unlockable hints
-  - File uploads to the server or an Amazon S3-compatible backend
-  - Limit challenge attempts & hide challenges
-  - Automatic bruteforce protection
-- Individual and Team based competitions
-  - Have users play on their own or form teams to play together
-- Scoreboard with automatic tie resolution
-  - Hide Scores from the public
-  - Freeze Scores at a specific time
-- Scoregraphs comparing the top 10 teams and team progress graphs
-- Markdown content management system
-- SMTP + Mailgun email support
-  - Email confirmation support
-  - Forgot password support
-- Automatic competition starting and ending
-- Team management, hiding, and banning
-- Customize everything using the [plugin](https://docs.ctfd.io/docs/plugins/overview) and [theme](https://docs.ctfd.io/docs/themes/overview) interfaces
-- Importing and Exporting of CTF data for archival
-- And a lot more...
+**Giáo viên hướng dẫn:**
 
-## Install
+- ThS. Lê Hà Minh
 
-1. Install dependencies: `pip install -r requirements.txt`
-   1. You can also use the `prepare.sh` script to install system dependencies using apt.
-2. Modify [CTFd/config.ini](https://github.com/CTFd/CTFd/blob/master/CTFd/config.ini) to your liking.
-3. Use `python serve.py` or `flask run` in a terminal to drop into debug mode.
+---
 
-You can use the auto-generated Docker images with the following command:
+## 📝 Giới thiệu
 
-`docker run -p 8000:8000 -it ctfd/ctfd`
+Trong thời đại số bùng nổ, mọi thông tin cá nhân, giao dịch tài chính và hoạt động đời sống đều được số hóa và lưu trữ trực tuyến. Điều này mở ra cơ hội to lớn cho xã hội phát triển nhưng đồng thời cũng tạo điều kiện thuận lợi cho các cuộc tấn công mạng ngày càng tinh vi và nguy hiểm.
 
-Or you can use Docker Compose with the following command from the source repository:
+Thực tế cho thấy, nhu cầu nhân lực về **An toàn thông tin** ngày càng gia tăng. Tuy nhiên, việc đào tạo kỹ năng thực hành bảo mật còn nhiều hạn chế, đặc biệt với sinh viên và kỹ thuật viên mới vào nghề. Phần lớn các tài liệu hiện có chỉ mang tính lý thuyết, hoặc các cuộc thi CTF thường quá khó với người mới bắt đầu, gây khó khăn trong quá trình tiếp cận.
 
-`docker compose up`
+---
 
-Check out the [CTFd docs](https://docs.ctfd.io/) for [deployment options](https://docs.ctfd.io/docs/deployment/installation) and the [Getting Started](https://docs.ctfd.io/tutorials/getting-started/) guide
+## 🎯 Mục tiêu dự án
 
-## Live Demo
+Xây dựng một nền tảng học tập và thực hành bảo mật hiệu quả với các tiêu chí:
 
-https://demo.ctfd.io/
+- ✅ **Dễ tiếp cận**: Phù hợp với người mới học hoặc mới làm quen với CTF.
+- ✅ **Thực tiễn**: Dựa trên các lỗ hổng bảo mật phổ biến trong thực tế.
+- ✅ **Từng bước nâng cao**: Bài lab được xây dựng theo cấp độ, từ cơ bản đến nâng cao.
+- ✅ **Có tính sư phạm**: Giúp người học dễ dàng hiểu bản chất, khai thác và phòng tránh các lỗ hổng.
 
-## Support
+---
 
-To get basic support, you can join the [MajorLeagueCyber Community](https://community.majorleaguecyber.org/): [![MajorLeagueCyber Discourse](https://img.shields.io/discourse/status?server=https%3A%2F%2Fcommunity.majorleaguecyber.org%2F)](https://community.majorleaguecyber.org/)
+## 🧠 Nội dung chính
 
-If you prefer commercial support or have a special project, feel free to [contact us](https://ctfd.io/contact/).
+Dự án bao gồm 18 chủ đề phổ biến trong bảo mật Web và ứng dụng, mỗi chủ đề có:
 
-## Managed Hosting
+- Một tài liệu mô tả chi tiết về lỗ hổng.
+- Bài thực hành khai thác trong môi trường an toàn.
+- Hướng dẫn phân tích, tìm lỗi, phòng thủ và vá lỗi.
 
-Looking to use CTFd but don't want to deal with managing infrastructure? Check out [the CTFd website](https://ctfd.io/) for managed CTFd deployments.
+Ví dụ các chủ đề:
 
-## MajorLeagueCyber
+- SQL Injection
+- Cross-site Scripting (XSS)
+- File Upload Vulnerabilities
+- Path Traversal
+- Insecure Deserialization
+- JSON Web Token
+- Web Cache Deception
+  > Và nhiều lỗ hổng khác...
 
-CTFd is heavily integrated with [MajorLeagueCyber](https://majorleaguecyber.org/). MajorLeagueCyber (MLC) is a CTF stats tracker that provides event scheduling, team tracking, and single sign on for events.
+---
 
-By registering your CTF event with MajorLeagueCyber users can automatically login, track their individual and team scores, submit writeups, and get notifications of important events.
+## 🚀 Dự án
 
-To integrate with MajorLeagueCyber, simply register an account, create an event, and install the client ID and client secret in the relevant portion in `CTFd/config.py` or in the admin panel:
+```bash
+git clone https://github.com/TNT-B/R3d-CTF.git
 
-```python
-OAUTH_CLIENT_ID = None
-OAUTH_CLIENT_SECRET = None
 ```
-
-## Credits
-
-- Logo by [Laura Barbera](http://www.laurabb.com/)
-- Theme by [Christopher Thompson](https://github.com/breadchris)
-- Notification Sound by [Terrence Martin](https://soundcloud.com/tj-martin-composer)

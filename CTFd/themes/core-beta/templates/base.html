@@ -47,7 +47,7 @@
     </main>
       
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container flex-box text-center">
             <a href="https://github.com/0xdevsachin" class="text-secondary">
                 <small class="text-muted">Developed by R3d CTF</small>
@@ -56,7 +56,56 @@
                 <small class="text-muted">Powered by CTFd</small>
             </a>
         </div>
-    </footer>
+    </footer> -->
+
+<footer class="footer text-white ">
+  <div class="container">
+    <div class="row">
+      <!-- Cột 1: Tên & giới thiệu -->
+      <div class="col-md-6 mb-4">
+        <h5 class="fw-bold text-warning">R3D CTF</h5>
+        <br/>
+        <p class="text-muted">
+          Developed by R3D CTF - University of Science, VNU-HCM.
+        </p>
+        <p class="text-secondary">
+          Tran Nguyen Thanh Binh
+        </p>
+        <p class="text-secondary">
+          Hoang Anh Tu
+        </p>
+      </div>
+
+      <!-- Cột 2: Liên hệ (căn phải) -->
+        <div class="col-md-6 mb-4 d-flex flex-column align-items-md-end text-md-end">
+            <ul class="list-unstyled">
+            <h5 class="text-decoration-none text-light d-flex align-items-center mb-3">Liên hệ</h5>
+            <br/>
+            <li class="mb-3">
+            <a href="mailto:r3dctf.info@gmail.com" class="text-decoration-none text-light d-flex align-items-center">
+                <i class="fas fa-envelope me-2 text-warning" style="margin-right: 11px; margin-left: 3px;"></i> r3dctf.info@gmail.com
+            </a>
+            </li>
+            <li class="mb-3">
+            <a href="https://discord.gg/v9pXeMpu" target="_blank" rel="noopener" class="text-decoration-none text-light d-flex align-items-center">
+                <i class="fab fa-discord me-2 text-primary" style="margin-right: 10px;"></i> R3d CTF Support
+                <i class="fas fa-up-right-from-square ms-2" style="font-size: 12px; opacity: 0.7; margin-left: 10px;"></i>
+            </a>
+            </li>
+        </ul>
+</div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <!-- Bản quyền -->
+    <div class="text-center">
+      <p class="mb-0 text-muted small">&copy; 2025 <strong>R3d CTF</strong>. All rights reserved.</p>
+      <br/>
+    </div>
+  </div>
+</footer>
 
     <script defer src="{{ url_for('views.themes', path='js/vendor.bundle.js') }}"></script>
     <script defer src="{{ url_for('views.themes', path='js/core.js') }}"></script>

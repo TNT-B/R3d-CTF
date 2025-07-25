@@ -1,22 +1,282 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container my-4">
-        <h1>hello doc doc doc</h1>
-        <p>This is a test document to check the static HTML rendering in CTFd.</p>
-        <p>Feel free to modify this content as needed.</p>
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Document Title</h2>
-                <p>This section can contain any content you want to display in the document.</p>
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-                <p>More content can be added here.</p>
-            </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<style>
+    .pdf-section {
+        background-color: #0e0e0e;
+        border-left: 5px solid #872341;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        /* box-shadow: 0 0 15px rgba(0, 255, 204, 0.1); */
+        box-shadow: 0 0 15px rgba(150, 192, 255, 0.228);
+        /* box-shadow: 0 0 15px #600600; */
+        color: #f0f0f0;
+    }
+
+    .pdf-section h3 {
+        color: #872341;
+    }
+
+    .pdf-link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 1rem;
+        text-decoration: none;
+        background-color: #121212;
+        border: 2px solid #872341;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        color: #872341;
+    }
+
+    .pdf-link:hover {
+        background-color: #872341;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .pdf-link i {
+        margin-right: 10px;
+        font-size: 24px;
+    }
+
+    body {
+        /* background-color: #101010; */
+        background-color: #0b0f1a;
+    }
+
+    .search-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto; /* Canh giữa ngang */
+    }
+
+    .search-box {
+        width: 100%;
+        padding: 0.75rem 1.25rem;
+        padding-left: 2.5rem; /* chừa chỗ cho icon */
+        font-size: 1rem;
+        border: 2px solid #872341;
+        border-radius: 10px;
+        background-color: #1a1a1a;
+        color: #f0f0f0;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 8px rgba(135, 35, 65, 0.3);
+    }
+
+    .search-box::placeholder {
+        color: #aaa;
+    }
+
+    .search-box:focus {
+        outline: none;
+        border-color: #f25478;
+        box-shadow: 0 0 12px rgba(242, 84, 120, 0.5);
+        background-color: #111;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 1rem;
+        pointer-events: none;
+    }
+
+</style>
+
+<script>
+    function filterTopics() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const sections = document.querySelectorAll(".pdf-section");
+
+        sections.forEach(section => {
+            const title = section.querySelector("h3").textContent.toLowerCase();
+            section.style.display = title.includes(input) ? "block" : "none";
+        });
+    }
+</script>
+
+<div class="container my-5">
+    <h1 class="icon-title text-center mb-4"> <i class="fas fa-book"></i> Tài liệu Hệ thống <i class="fas fa-book"></i> </h1>
+    <p class="text-center text-light">Khám phá các chủ đề bảo mật thông qua tài liệu PDF chất lượng cao.</p>
+
+    <!-- Ô tìm kiếm -->
+    <div class="search-container my-4">
+        <i class="fas fa-search search-icon"></i>
+        <input id="searchInput" type="text" class="search-box ps-5" placeholder="Tìm kiếm chủ đề..." onkeyup="filterTopics()" />
+    </div>
+    <br/>
+
+     <!-- Section 1: Access Control -->
+    <div class="pdf-section">
+        <h3> Access Control Vulnerabilities</h3>
+        <p>Lỗ hổng phân quyền cho phép người dùng truy cập dữ liệu hoặc chức năng mà họ không được phép.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Access Control Vulnerabilities.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
     </div>
 
-{% endblock %} 
+    <!-- Section 2: Authentication -->
+    <div class="pdf-section">
+        <h3>Authentication</h3>
+        <p>Các lỗi trong quá trình xác thực người dùng như brute-force, credential stuffing, hay bypass login có thể dẫn đến truy cập trái phép.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Authentication.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 3: Business logic vulnerabilities-->
+    <div class="pdf-section">
+        <h3> Business Logic Vulnerabilities</h3>
+        <p>Khai thác sai sót trong logic nghiệp vụ ứng dụng, như bỏ qua thanh toán, vượt giới hạn điểm thưởng hoặc thao túng quy trình đăng ký.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Business logic vulnerabilities.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 4: Cross-Origin Resource Sharing  -->
+    <div class="pdf-section">
+        <h3> Cross-Origin Resource Sharing (CORS)</h3>
+        <p>Cấu hình CORS không an toàn có thể cho phép website bên thứ ba đọc dữ liệu nhạy cảm từ nguồn gốc khác.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Cross-Origin Resource Sharing.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 5: Cross-site Scripting (XSS) -->
+    <div class="pdf-section">
+        <h3> Cross-site Scripting (XSS)</h3>
+        <p>Cho phép kẻ tấn công chèn mã JavaScript độc hại vào trang web để đánh cắp thông tin, cookie, hoặc chiếm quyền phiên.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Cross-site Scripting (XSS).pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 6: File Upload Vulnerabilities -->
+    <div class="pdf-section">
+        <h3> File Upload Vulnerabilities</h3>
+        <p>Ứng dụng xử lý tệp tải lên không đúng cách, có thể bị khai thác để tải lên mã độc hoặc chiếm quyền máy chủ.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/File Upload Vulnerabilities.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 7: HTTP Host Header Attacks -->
+    <div class="pdf-section">
+        <h3> HTTP Host Header Attacks</h3>
+        <p>Lạm dụng trường Host trong HTTP request để thực hiện tấn công như web cache poisoning hoặc password reset poisoning.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/HTTP Host Header Attacks.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 8: HTTP Request Smuggling -->
+    <div class="pdf-section">
+        <h3> HTTP Request Smuggling</h3>
+        <p>Kỹ thuật lợi dụng sự không đồng bộ giữa frontend và backend proxy để chèn các request độc hại vào luồng hợp lệ.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/HTTP Request Smuggling.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 9: Information Disclosure -->
+    <div class="pdf-section">
+        <h3> Information Disclosure</h3>
+        <p>Lộ thông tin nhạy cảm như đường dẫn hệ thống, cấu hình server, stack trace hoặc dữ liệu người dùng do debug hay lỗi xử lý.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Information Disclosure.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 10: Insecure deserialization -->
+    <div class="pdf-section">
+        <h3> Insecure Deserialization</h3>
+        <p>Cho phép thực thi mã độc hoặc sửa đổi dữ liệu ứng dụng thông qua việc deserialize đối tượng không đáng tin cậy.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Insecure deserialization.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 11: JSON Web Token -->
+    <div class="pdf-section">
+        <h3> JSON Web Token (JWT)</h3>
+        <p>Lỗi trong cách ứng dụng sử dụng JWT như thiếu xác thực chữ ký hoặc sử dụng thuật toán yếu dẫn đến giả mạo token.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/JSON Web Token.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 12: NoSQL injection -->
+    <div class="pdf-section">
+        <h3> NoSQL injection</h3>
+        <p>Tấn công vào các hệ cơ sở dữ liệu NoSQL bằng cách chèn truy vấn nguy hiểm vào input, tương tự SQLi.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/NoSQL injection.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 13: OAuth 2.0 authentication -->
+    <div class="pdf-section">
+        <h3> OAuth 2.0 authentication</h3>
+        <p>Lỗi cấu hình OAuth có thể bị khai thác để chiếm quyền truy cập hoặc bỏ qua xác thực người dùng.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/OAuth 2.0 authentication.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 14: OS command injection -->
+    <div class="pdf-section">
+        <h3> OS command injection</h3>
+        <p>Cho phép kẻ tấn công thực thi lệnh hệ điều hành trên server thông qua các input không được kiểm soát chặt chẽ.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/OS command injection.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 15: Path travelsal -->
+    <div class="pdf-section">
+        <h3> Path travelsal</h3>
+        <p>Truy cập các tập tin nhạy cảm bên ngoài thư mục cho phép bằng cách điều hướng "../" trong đường dẫn.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Path travelsal.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 16: Server-Side Template Injection -->
+    <div class="pdf-section">
+        <h3> Server-Side Template Injection (SSTI)</h3>
+        <p>Chèn mã độc vào template server-side như Jinja2 hoặc Twig để thực thi mã trên máy chủ.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Server-Side Template Injection.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 17: SQL Injection -->
+    <div class="pdf-section">
+        <h3> SQL Injection</h3>
+        <p>Chèn truy vấn SQL độc hại vào input để đọc, ghi, xóa hoặc chiếm quyền kiểm soát dữ liệu trong cơ sở dữ liệu.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/SQL Injection.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+
+    <!-- Section 18: Web Cache Deception -->
+    <div class="pdf-section">
+        <h3> Web Cache Deception</h3>
+        <p>Đánh lừa hệ thống cache của web để lưu trữ và cung cấp dữ liệu nhạy cảm cho người không được phép.</p>
+        <a class="pdf-link" href="{{ url_for('views.themes', path='documents/Web Cache Deception.pdf') }}" target="_blank">
+            <i class="fas fa-file-pdf"></i> Xem tài liệu
+        </a>
+    </div>
+    <br/>
+</div>
+{% endblock %}
+
